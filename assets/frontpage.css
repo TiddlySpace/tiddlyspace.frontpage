@@ -1,0 +1,547 @@
+body {
+	background: #F0F4F8;
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 16px;
+}
+
+#header {
+	height: 56px;
+	width: 960px;
+	position: relative;
+	margin: 0 auto;
+	padding: 8px 0 10px;
+}
+
+.ts-loggedin #login {
+	display: none;
+}
+
+#login {
+	color: #79757A;
+	font-size: 0.8em;
+	position: absolute;
+	top: 2px; right: 0;
+}
+
+#login a {
+	color: #79757A;
+}
+
+/* the div currently added by TSForms, needs id or class */
+#login div {
+	float: right;
+}
+
+.registration .messageArea,
+#login .messageArea {
+	padding-left: 10px;
+}
+
+#login div .button {
+	background: none;
+	border: none;
+	margin-top: 3px;
+	padding: 0 0 0 5px;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.ie #login {
+	text-align: right;
+}
+
+#header h1 {
+	color: #4c4a54;
+	font-size: 2em;
+	line-height: 56px;
+	padding-left: 67px;
+	text-shadow: 0px 2px 2px #fff;
+}
+
+#header img {
+	height: 56px;
+	width: 56px;
+	float: left;
+}
+
+#container {
+	width: 100%;
+	position: relative;
+	background: url(DarkPerlinNoise.jpg);
+	border-top: 7px solid rgba(26, 31, 30, 0.95);
+	border-left: none;
+	border-right: none;
+	padding: 41px 0;
+}
+
+#main {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#main-text {
+	/* ttemp until sizes are recalculated */
+	font-size: 0.9em;
+	color: #fff;
+	font-family: Helvetica;
+	text-shadow: 0 1px 0 black;
+	padding-right: 350px;
+}
+
+#main-text .tagline {
+	color: #fff;
+	font-size: 2.3em;
+	text-shadow: 0 4px 4px black;
+}
+
+#main-text .description {
+	font-size: 1.5em;
+	margin-top: 1.2em;
+}
+
+#login .loginlink,
+#login div .button,
+.registration .messageArea,
+#login .messageArea,
+#main-text span {
+	color: #cf81b0;
+}
+
+.messageArea {
+	color: #CF81B0;
+	font-size: 0.7em;
+}
+
+/**********************/
+/* Tiddler definition */
+/**********************/
+
+#article {
+	width: 240px;
+	float: right;
+	background-color: rgb(233,227,211);
+	background-image: url(paper.jpg);
+	font-family: Georgia;
+	font-size: 1em; 
+	line-height : 1;
+}
+
+.borderimage #article {
+	background-color: transparent;
+	background-image: none;
+	-moz-border-image: url(note.png) 20 40 30 40 stretch;
+	border-image: url(note.png) 20 40 30 40 stretch;
+	-webkit-border-image: url(note.png) 20 40 30 40 stretch;
+	border-width: 20px 40px 30px 40px;
+}
+
+.ie #article {
+	height: 234px;
+	width: 280px;
+	background-image: url(ie_note.png);
+	background-repeat: none;
+	border: none;
+	padding: 20px;
+}
+
+#article dl dt {
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0.5em 0 0;
+}
+#article dl dt span {
+	font-size: 0.6em;
+	color: #1C1A1F;
+	color: #7882A4;
+}
+#article dl dd {
+	line-height: 1.5em;
+}
+
+#article dl dd:first-of-type {
+	font-style: italic;
+	color: #fd5b40;
+	color: #DA4E37;
+	font-size: 0.95em;
+}
+#article dl dd.definitions {
+	margin: 1em 0 1em 1.5em;
+}
+
+/****************/
+/** Login Form **/
+/****************/
+
+form.login,
+form.login .label {
+	display: none;
+}
+
+form.registration .messageArea,
+form.login .messageArea {
+	font-size: 0.55em;
+}
+
+form.registration .messageArea.error,
+form.login .messageArea.error {
+	color: #cf81b0;
+}
+
+#formbar {
+	background: #1a1e1f;
+	padding: 1.2em 0 1.2em;
+}
+
+#formbar form,
+#formbar .ts-logout {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#formbar .ts-logout {
+	color: #fff;
+	font-size: 1.5em;
+	padding: 0.6em;
+}
+
+#formbar .ts-logout .logout-wrap {
+	position: relative;
+}
+
+#formbar .logout-wrap form {
+	width: 100%;
+}
+
+#formbar .ts-logout a,
+#formbar .ts-logout a + span {
+	color: #BC4378;
+	text-decoration: none;
+}
+
+#formbar .ts-logout a:hover {
+	text-decoration: underline;
+}
+
+#formbar .ts-logout form {
+	display: inline;
+	position: absolute;
+	right:  1px;
+	bottom: -1.8em;
+	font-size: 0.6em;
+	line-height: 0.7em;
+	text-align: right;
+}
+
+#formbar .ts-logout form input {
+	font-size: 1em;
+}
+
+#formbar .ts-openid {
+	padding-top: 0.5em;
+}
+
+#formbar form.ts-registration div.inputs-wrap {
+	margin-top: 0.3em;
+	width: 610px;
+	float: left;
+}
+
+#formbar form div p {
+	color: #CF81B0;
+	font-size: 1.5em;
+	padding: 0 0 0 0.1em;
+}
+
+#formbar form input,
+.ts-logout .button {
+	padding: 0.3em 0.5em;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+}
+
+#formbar .ts-logout a.button {
+	color: #fff;
+	margin-left: 50px;
+	padding: 0.3em 0.9em;
+}
+
+#formbar .ts-logout a.button:hover {
+	text-decoration: none;
+}
+
+#formbar form input {
+	font-size: 1.3em;
+}
+
+#formbar form input[type="text"],
+#formbar form input[type="password"] {
+	background: rgba(255,255,255,0.2);
+	-moz-box-shadow:inset 2px 2px 3px rgba(26,30,31,0.5);
+	-webkit-box-shadow:inset 2px 2px 3px rgba(26,30,31,0.5);
+	-o-box-shadow:inset 2px 2px 3px rgba(26,30,31,0.5);
+	-ms-box-shadow:inset 2px 2px 3px rgba(26,30,31,0.5);
+	box-shadow:inset 2px 2px 3px rgba(26,30,31,0.5);
+}
+
+#formbar form input[type="text"]:focus,
+#formbar form input[type="password"]:focus {
+	background: rgba(255,255,255,0.7);
+}
+
+#formbar form input[type="password"],
+#formbar form.ts-openid input[type="text"] {
+	width: 275px;
+	margin-right: 0.1em;
+}
+
+#formbar form.ts-openid input.openid {
+	width: 400px;
+}
+
+.username + span {
+	/*display: none;*/
+	color: rgba(255,255,255,0.3);
+	font-size: 1.2em;
+	padding-left: 5px;
+	margin-left: -170px;
+}
+
+.username:focus + span {
+	display: inline;
+	color: #BC4378;
+}
+
+#formbar form.ts-registration .username {
+	width: 275px;
+	padding-right: 170px;
+	margin-bottom: 0.25em;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.3);
+}
+:-moz-placeholder {
+    color: rgba(255,255,255,0.3);
+}
+
+.button-wrap {
+	width: 350px;
+	float: right;
+}
+
+.ts-registration .button {
+	height: 2.5em;
+	margin-top: 0.7em;
+	margin-left: 70px;
+}
+
+.ts-login .button,
+.ts-openid .button {
+	float: right;
+	margin-right: 35px;
+	margin-top: -1px;
+}
+
+.button {
+	width: 250px;
+	background: #0082af;
+	color: #fff;
+	font-weight: 900;
+}
+
+#formbar .logout-button {
+	background: none;
+	color: rgba(207, 129, 176, 0.4);
+	padding: 0;
+}
+
+#formbar .logout-button:hover {
+	color: rgba(207, 129, 176, 1);
+	cursor: pointer;
+}
+
+/*****************/
+/* Features List */
+/*****************/
+
+#features-wrap {
+	background: #F0F4F8;
+}
+
+#features {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#features li {
+	height: 100px;
+	width: 437px;
+	float: left;
+	padding: 20px;
+	list-style: none;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #dce7f1;
+	border-top: 1px solid #F8F8F8;
+	color: #1C1A1F;
+}
+
+.ie7 #features li, .ie6 #features li {
+background-position:5% 50%;
+}
+
+li.forganise { background-image: url(tag_blue.png); }
+li.forganise:hover { background-image: url(tag_pink_bevel.png); }
+li.fapps { background-image: url(http://tiddlyspace.com/bags/common/tiddlers/box_closed_blue.png); }
+li.fapps:hover { background-image: url(box_closed_pink_bevel.png); }
+li.fcommunity { background-image: url(community_blue.png); }
+li.fcommunity:hover { background-image: url(community_pink_bevel.png); }
+li.ftiddlywiki { background-image: url(http://tiddlyspace.com/bags/common/tiddlers/tiddlywiki2_blue.png); }
+li.ftiddlywiki:hover { background-image: url(tiddlywiki2_pink_bevel.png); }
+li.fapi { background-image: url(plug_blue.png); }
+li.fapi:hover { background-image: url(plug_pink_bevel.png); }
+li.fopen { background-image: url(gears_blue.png); }
+li.fopen:hover { background-image: url(gears_pink_bevel.png); }
+
+#features li:nth-child(odd) {
+	border-right: 1px solid #dce7f1;
+}
+
+#features li:nth-child(even) {
+	border-left: 1px solid #F8F8F8;
+}
+
+#features li:nth-child(1),
+#features li:nth-child(2) {
+	border-top: none;
+}
+
+#features li:nth-child(7),
+#features li:nth-child(8) {
+	border-bottom: none;
+}
+
+li h4,
+li p {
+	margin-left: 120px;
+}
+
+li h4 {
+	text-shadow: 0px 1px 1px #fff;
+}
+
+li p {
+	font-size: 0.9em;
+}
+
+/****************/
+/**** Footer ****/
+/****************/
+
+#footer {
+	background: #1A1F1E;
+	padding: 0.3em 0;
+	clear: both;
+}
+
+#footer-content {
+	width: 960px;
+	color: #B2AAA4;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	margin: 0 auto;
+}
+
+.links {
+	float: right;
+}
+
+.links a {
+	margin-left: 10px;
+}
+
+#footer-content a {
+	color: #B2AAA4;
+	text-decoration: none;
+}
+
+#footer-content a:hover {
+	color: #80a7c1;
+	text-decoration: underline;
+}
+
+@font-face {
+	font-family: 'JournalRegular';
+    src: url('journal.eot');
+    src: url('journal.eot?#iefix') format('embedded-opentype'),
+         url('journal.woff') format('woff'),
+         url('journal.ttf') format('truetype'),
+         url('journal.svg#JournalRegular') format('svg');
+}
+
+/****************/
+/* added by Jon */
+/****************/
+#article {
+	position: relative;
+}
+.openidhelp {
+	font-family: Helvetica;
+	font-size: 0.3em;
+	clear: both;
+	margin-left: 7px;
+	margin-top: 10px;
+}
+.showopenidlogin,
+.showopenidregister,
+.openid-help {
+	display: block;
+	font-size: 0.7em;
+	color: #fff;
+	text-align: right;
+	margin-right: 35px;
+	text-decoration: none;
+	margin-top: 1px;
+}
+
+.showopenidlogin:hover,
+.showopenidregister:hover,
+.openid-help:hover {
+	text-decoration: underline;
+}
+/****************/
+/* Notifications */
+/****************/
+
+#notification {
+	background: #B22B3C;
+	text-align: center;
+	color: #fff;
+	padding-bottom: 0.1em;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15) inset;
+}
+
+#notification a {
+	color: #8C9DA7;
+}
+
+#notification a:hover {
+	color: #DCE7F1;
+}
+
+/****************/
+/* new clearfix */
+/****************/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
