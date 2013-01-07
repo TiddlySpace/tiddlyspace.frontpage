@@ -374,13 +374,12 @@ form.login .messageArea.error {
 }
 
 #features {
-	width: 960px;
 	margin: 0 auto;
 }
 
 #features li {
 	height: 100px;
-	width: 437px;
+	width: 35%;
 	float: left;
 	padding: 20px;
 	list-style: none;
