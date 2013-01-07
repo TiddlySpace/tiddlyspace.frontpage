@@ -6,27 +6,24 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
     <head>
         <title>tiddlyspace - bring your thoughts to life</title>
-        <link rel="stylesheet" href="http://frontpage.tiddlyspace.com/reset.css" />
+        <link rel="stylesheet" href="/bags/common/tiddlers/reset.css" />
         <link rel="stylesheet" href="frontpage.css" />
     </head>
     
     <body class="borderimage">
-<!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
-
-<!--div id="notification">
-            <p>Three hour downtime for database upgrade scheduled for 23:59, 14 December.</p>
+        <!--div id="notification">
+        <p>Three hour downtime for database upgrade scheduled for 23:59, 14 December.</p>
         </div--!>
-                <div id="header">
+        <div id="header">
             <div id="login">Already have an account?
                 <a class="loginlink" href="#login">Login</a> 
             </div>
-            <img src="http://frontpage.tiddlyspace.com/bags/frontpage_public/tiddlers/shinyspace.png" alt="" />
+            <img src="shinyspace.png" alt="" />
             <h1>TiddlySpace</h1>
         </div><!-- end #header -->
         
         <div id="container">
             <div id="main">
-                
                 <div id="article">
                     <dl>
                         <dt>tiddler <span>| '&#648;&#618;&#599;&#621;&#601; |</span></dt>
@@ -43,13 +40,12 @@
                 <div id="main-text">
                     <p class="tagline" id="main-tagline" style="font-weight:bold;">Bring your thoughts to life.</p>
                     <p class="description">Sometimes we all need a little help with organising what's going on in our heads.  <span>TiddlySpace</span> lets you organise your <span>thoughts</span> and <span>ideas</span> so that they are with you wherever, whenever and however you need them.</p>
-                    </div>
+                </div>
             </div>
         </div>
         
         <div id="formbar" class="clearfix">
             <div  class="logout ts-logout"></div>
-            
             <form class="ts-registration registration register clearfix" action="" autocomplete="off">
                 <div class="inputs-wrap">
                     <input class="username placeholder" type="text" name="username" placeholder="username" />
@@ -125,74 +121,22 @@
                 <div class="links">
                     <a href="http://blog.tiddlyspace.com">blog</a>
                     <a href="http://featured.tiddlyspace.com">featured</a>
-                    <a href="http://docs.tiddlyspace.com">documentation</a>
+                    <a href="http://help.tiddlyspace.com">help</a>
                     <a href="https://github.com/TiddlySpace/tiddlyspace">source</a>
                 </div>
-                <p>TiddlySpace 2011, created by <a href="http://osmosoft.com">Osmosoft</a></p>
+                <p>TiddlySpace 2013, created by <a href="http://osmosoft.com">Osmosoft</a></p>
             </div>
         </div>
         
-        <script type='text/javascript' src='http://tiddlyspace.com/bags/console/tiddlers/jquery.min.js'></script>
-        <script type='text/javascript' src='http://tiddlyspace.com/bags/console/tiddlers/jquery-json.min.js'></script>
+        <script type='text/javascript' src='/bags/common/tiddlers/jquery.js'></script>
+        <script type='text/javascript' src='/bags/common/tiddlers/jquery-json.js'></script>
         <script type='text/javascript' src='/bags/tiddlyspace/tiddlers/chrjs'></script>
         <script type='text/javascript' src='/bags/common/tiddlers/chrjs.space'></script>
         <script type='text/javascript' src='/bags/common/tiddlers/chrjs.users'></script>
-<script type='text/javascript' src='/bags/common/tiddlers/chrjs.identities'></script>
+        <script type='text/javascript' src='/bags/common/tiddlers/chrjs.identities'></script>
         <script type='text/javascript' src="/bags/common/tiddlers/ts.js"></script>
-<script src="/status.js"></script>
-        <script type="text/javascript">
-
-        $(document).ready(function() {
-            
-            // the default form in ts.js for logout is not sufficient
-            // for the frontpage so I've added so extra DOM elements
-            ts.init(function(ts){
-                $(".ts-logout .button").removeClass("button").addClass("logout-button");
-                $(".ts-logout form").wrap($("<span>", {'class': 'logout-wrap'}));
-                $("<a></a>", {'class': 'button', 'href': ts.getHost(ts.user.name), 'html': "Go to your space &raquo;"}).appendTo($(".logout-wrap"));
-            },
-            { space: "" });
-
-            // frontpage specific
-            var fix_placeholder = function(i, e) {
-                var p = $(e).attr('placeholder');
-                if(p) {
-                    $(e).val(p);
-                }
-                $(e).focus(function() {
-                    var me = $(this);
-                    if(me.val() == me.attr('placeholder')) {
-                        me.val("");
-                    }
-                }).blur(function() {
-                    var me = $(this);
-                    if(me.val() == "") {
-                        me.val(me.attr('placeholder'));
-                    }
-                });
-            };
-            if(navigator.appName === "Microsoft Internet Explorer") {
-                $("#article input.placeholder").each(fix_placeholder);
-            }
-
-            $(".loginlink").live('click', function(ev) {
-                $(".register,.ts-openidregister,.ts-openidlogin").hide();
-                $(".login").show();
-                return false;
-            });
-
-            $(".showopenidlogin").live('click', function(ev) {
-                $(".login").hide();
-                $(".ts-openidlogin").show();
-                return false;
-            });
-            $(".showopenidregister").live('click', function(ev) {
-                $(".register").hide();
-                $(".ts-openidregister").show();
-                return false;
-            });
-        });
-        </script>
+        <script src="/status.js"></script>
+        <script type="text/javascript" src='frontpage.js'></script>
         <!--[if lte IE 6]>
         <script type="text/javascript" src="/supersleight.jquery.js"></script>
         <script type="text/javascript">
