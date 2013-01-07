@@ -133,8 +133,9 @@ body {
 	background-color: transparent;
 	background-image: none;
 	-moz-border-image: url(note.png) 20 40 30 40 stretch;
-	border-image: url(note.png) 20 40 30 40 stretch;
 	-webkit-border-image: url(note.png) 20 40 30 40 stretch;
+	border-image: url(note.png) 20 40 30 40 fill stretch;
+	border-style: solid;
 	border-width: 20px 40px 30px 40px;
 }
 
