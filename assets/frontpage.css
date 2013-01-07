@@ -546,3 +546,11 @@ li p {
 	}
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+#rbox {
+	width: 20%;
+	height: 380px;
+	position: absolute;
+	bottom: 2em;
+	right: .5em;
+}
