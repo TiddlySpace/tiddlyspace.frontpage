@@ -68,9 +68,10 @@ body {
 
 #container {
 	width: 100%;
+	background: #1a1e1f;
 	position: relative;
-	background: url(DarkPerlinNoise.jpg);
 	border-top: 7px solid rgba(26, 31, 30, 0.95);
+        border-bottom: 7px solid #F0F4F8;
 	border-left: none;
 	border-right: none;
 	padding: 41px 0;
