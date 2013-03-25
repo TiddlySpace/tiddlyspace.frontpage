@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/TiddlySpace/tiddlyspace.frontpage.png)](https://travis-ci.org/TiddlySpace/frontpage)
+
 # Intro
 
 This is the frontpage of http://tiddlyspace.com maintained
@@ -19,7 +21,7 @@ This will be expanded on in due-course.
 ## Setup
 
     npm install
-    ./install_casperjs.sh
+    sudo ./install_casperjs.sh
 
 ## Testing
 
