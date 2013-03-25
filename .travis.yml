@@ -1,5 +1,5 @@
 language: node_js
 node_js:
   - 0.8
-before_install: 'sudo pip install -U tsapp && ./install_casperjs.sh && tsapp serve &'
+before_install: 'sudo pip install -U tsapp && sudo ./install_casperjs.sh && tsapp serve &'
 before_script: 'npm install -g phantomjs grunt-cli'
