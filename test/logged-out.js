@@ -15,7 +15,7 @@ casper.then(function checkThereIsNoUserIsLoggedIn() {
 
 casper.then(function checkTheRegistrationFormIsPresent() {
 
-    this.test.assertVisible('form.ts-registration', 'regisration form is not visible when user is logged in');
+    this.test.assertVisible('form.ts-registration', 'regisration form is visible when no user is logged in');
 });
 
 casper.run(function() {

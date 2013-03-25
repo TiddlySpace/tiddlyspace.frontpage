@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 src: ['test/logged-in.js']
             },
             'logged-out-tests': {
-                src: ['test/not-logged-in.js']
+                src: ['test/logged-out.js']
             }
         }
     });
