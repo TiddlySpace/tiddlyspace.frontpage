@@ -5,6 +5,10 @@ $(document).ready(function() {
 		$(".ts-logout .button").removeClass("button").addClass("logout-button");
 		$(".ts-logout form").wrap($("<span>", {'class': 'logout-wrap'}));
 		$("<a></a>", {'class': 'button', 'href': ts.getHost(ts.user.name), 'html': "Go to your space &raquo;"}).appendTo($(".logout-wrap"));
+
+        if(!ts.user.anon) {
+            $("form.ts-registration").hide();
+        }
 	},
 	{ space: "" });
 
