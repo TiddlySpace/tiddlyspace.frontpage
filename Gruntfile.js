@@ -46,7 +46,8 @@ module.exports = function (grunt) {
         casper: {
             options: {
                 test: true,
-                'fail-fast': true
+                'fail-fast': true,
+                direct: true
             },
             'logged-in-tests': {
                 src: ['test/logged-in.js']
