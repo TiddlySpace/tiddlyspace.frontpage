@@ -8,8 +8,8 @@ $(function() {
                     }
     });
 
-    var socketuri = 'http://tiddlyspace.com:8081'
-        , atdiv = $('<ul id="atbox" class="box">');
+    var socketuri = 'http://tiddlyspace.com:8081',
+        atdiv = $('<ul id="atbox" class="box">');
     if (typeof(io) === 'undefined') {
         atdiv.addClass('nosocket');
     } 

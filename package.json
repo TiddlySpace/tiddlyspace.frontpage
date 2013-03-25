@@ -1,0 +1,29 @@
+{
+  "name": "tiddlyspace.frontpage",
+  "version": "0.1.0",
+  "description": "The frontpage space for tiddlyspace.com",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TiddlySpace/tiddlyspace.frontpage.git"
+  },
+  "keywords": [
+    "tiddlyspace"
+  ],
+  "author": "Osmosoft",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt": "~0.4.1",
+    "grunt-casper": "~0.1.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0"
+  }
+}

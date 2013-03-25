@@ -16,12 +16,12 @@ $(document).ready(function() {
 		}
 		$(e).focus(function() {
 			var me = $(this);
-			if(me.val() == me.attr('placeholder')) {
+			if(me.val() === me.attr('placeholder')) {
 				me.val("");
 			}
 		}).blur(function() {
 			var me = $(this);
-			if(me.val() == "") {
+			if(me.val() === "") {
 				me.val(me.attr('placeholder'));
 			}
 		});
@@ -30,18 +30,18 @@ $(document).ready(function() {
 		$("#article input.placeholder").each(fix_placeholder);
 	}
 
-	$(".loginlink").live('click', function(ev) {
+	$(".loginlink").on('click', function() {
 		$(".register,.ts-openidregister,.ts-openidlogin").hide();
 		$(".login").show();
 		return false;
 	});
 
-	$(".showopenidlogin").live('click', function(ev) {
+	$(".showopenidlogin").on('click', function() {
 		$(".login").hide();
 		$(".ts-openidlogin").show();
 		return false;
 	});
-	$(".showopenidregister").live('click', function(ev) {
+	$(".showopenidregister").on('click', function() {
 		$(".register").hide();
 		$(".ts-openidregister").show();
 		return false;
