@@ -17,7 +17,10 @@
     "tiddlyspace"
   ],
   "author": "Osmosoft",
-  "license": "BSD",
+  "licenses" : [{
+    "type" : "BSD New",
+    "url" : "http://github.com/tiddlyspace/tiddlyspace.frontpage/LICENSE"
+  }],
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt-contrib-jshint": "~0.3.0",
